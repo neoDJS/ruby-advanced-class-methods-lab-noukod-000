@@ -42,14 +42,16 @@ class Song
 
   def self.new_from_filename(filename = "")
     this = self.new
-    puts filename.split(" - ")
     this.artist_name = filename.split(" - ").first
-    this.name = filename.split(" - ").last
+    this.name = filename.split(" - ").last.split(".").first
     this
   end
 
   def self.create_from_filename(filename = "")
-    this = self.new
+    this = self.create
+    this.artist_name = filename.split(" - ").first
+    this.name = filename.split(" - ").last.split(".").first
+    this
   end
 
   def self.destroy_all
