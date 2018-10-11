@@ -44,6 +44,7 @@ class Song
     this = self.new
     this.artist_name = filename.split(/[\s-.]/).first
     this.name = filename.split(/[\s-.]/).last
+    puts filename.split(/[\s-.]/)
     this
   end
 
